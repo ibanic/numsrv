@@ -34,7 +34,7 @@ export default class DimCombo extends Component {
 			itemsPreloaded: {...prevState.itemsPreloaded, [id]: null}
 		}))
 		// load selected
-		const r = await fetch('/api/dims/'+this.props.dimKey+'/items/'+id)
+		const r = await fetch(API_URL+'/api/dims/'+this.props.dimKey+'/items/'+id)
 		const js = await r.json()
 		this.setState(prevState => ({
 			itemsPreloaded: {...prevState.itemsPreloaded, [js.id]: js}

@@ -13,12 +13,12 @@ export default class Home extends Component {
 		}
 	}
 	async componentDidMount() {
-		const r = await fetch('http://localhost:5000/api/cubes')
+		const r = await fetch(API_URL+'/api/cubes')
 		const js = await r.json()
 		this.setState({cubes: js})
 
 
-		const r2 = await fetch('http://localhost:5000/api/dims')
+		const r2 = await fetch(API_URL+'/api/dims')
 		const js2 = await r2.json()
 		this.setState({dims: js2})
 	}

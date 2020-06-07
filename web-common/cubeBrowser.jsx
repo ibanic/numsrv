@@ -83,7 +83,7 @@ export default class CubeBrowser extends Component {
 		})
 		// load meta
 		let r, js
-		r = await fetch('/api/cubes/'+this.props.cubeKey)
+		r = await fetch(API_URL+'/api/cubes/'+this.props.cubeKey)
 		js = await r.json()
 		const change = { meta: js }
 		if( js.dims.length >= 2 ) {
@@ -201,7 +201,7 @@ export default class CubeBrowser extends Component {
 			return
 		// load
 		let r, js
-		r = await fetch('/api/cubes/'+this.state.meta.key+'/cellValuesById', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(load)})
+		r = await fetch(API_URL+'/api/cubes/'+this.state.meta.key+'/cellValuesById', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(load)})
 		js = await r.json()
 		this.setState(prevState => {
 			const vals = {...prevState.values}

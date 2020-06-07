@@ -12,7 +12,7 @@ export default class DimDetails extends Component {
 		}
 	}
 	async componentDidMount() {
-		const r = await fetch('http://localhost:5000/api/dims/'+this.props.match.params.dimKey)
+		const r = await fetch(API_URL+'/api/dims/'+this.props.match.params.dimKey)
 		const js = await r.json()
 		this.setState({data: js})
 	}

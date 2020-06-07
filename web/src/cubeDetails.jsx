@@ -43,7 +43,7 @@ export default class CubeDetails extends Component {
 
 	async componentDidMount() {
 		try {
-			const r = await fetch('http://localhost:5000/api/cubes/'+this.props.match.params.cubeKey)
+			const r = await fetch(API_URL+'/api/cubes/'+this.props.match.params.cubeKey)
 			if( r.status == 404 ) {
 				this.setState({error: 'Cube not found'})
 				return
@@ -96,7 +96,7 @@ export default class CubeDetails extends Component {
 				// load
 				this.setState(prevState => ({valueFull:{...prevState.valueFull, [idx]:null}}))
 				const pth = arr.map(n => n.toLocaleString('fullwide', {useGrouping:false})).join('/')
-				fetch('http://localhost:5000/api/cubes/'+this.state.data.key+'/cellById/'+pth)
+				fetch(API_URL+'/api/cubes/'+this.state.data.key+'/cellById/'+pth)
 				.then(r => r.json())
 				.then(js => this.setState(prevState => ({valueFull:{...prevState.valueFull, [idx]:js}})))
 			}

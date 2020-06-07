@@ -80,7 +80,7 @@ export default class Search extends Component {
 		}
 		let r, data
 		try {
-			r = await fetch('/api/dims/'+this.props.dimKey+'/search', {
+			r = await fetch(API_URL+'/api/dims/'+this.props.dimKey+'/search', {
 				method:		'POST',
 				headers:	{'Content-Type':'application/json'},
 				body:		JSON.stringify(queryObj),

@@ -62,7 +62,7 @@ export default class DimBrowser extends Component {
 			body:JSON.stringify(itmIds),
 			headers:{'Content-Type':'application/JSON'},
 		}
-		r = await fetch('/api/dims/'+this.props.dimKey+'/itemsMany', opt)
+		r = await fetch(API_URL+'/api/dims/'+this.props.dimKey+'/itemsMany', opt)
 		if(!r.ok) {
 			throw new Error('Error loading dims')
 		}

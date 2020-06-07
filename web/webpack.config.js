@@ -10,7 +10,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 module.exports = {
 
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
     //path: targetDir,
     publicPath: '/',
   },
