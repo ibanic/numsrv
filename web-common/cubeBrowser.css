@@ -1,0 +1,14 @@
+.cube-dims { display: flex; background-color: rgba(0,0,0,0.03); border-radius: 0.2rem; padding: 0.3rem 0.6rem; margin-bottom: 1rem; }
+.cube-dims > div { width: 8rem; margin-right: 0.5rem; }
+
+.cube td { vertical-align: top; }
+
+.cube-cell td { width: 8rem; overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; text-align: right; }
+
+
+.cube-cell td::selection{
+    background-color:transparent !important;
+    /*color:#fff !important;*/
+}

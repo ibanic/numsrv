@@ -1,0 +1,10 @@
+{
+  "name": "numsrv-13-web-common",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "PRIVATE",
+  "devDependencies": {
+    "react": "^16.5.2"
+  }
+}

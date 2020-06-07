@@ -1,0 +1,13 @@
+.dim-horizontal { display: flex; }
+
+.dim-horizontal .dim-item { width: 8rem; }
+.dim-item-container { display: flex; }
+.dim-horizontal .dim-item-container { justify-content: flex-end; }
+
+.dim-item-name { border: 1px solid transparent; flex-grow: 1; overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+.selectable .dim-item-name:hover { border-color: #666 !important; }
+
+
+.dim-horizontal .dim-item-name { flex-grow: 0; }

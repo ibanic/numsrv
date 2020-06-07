@@ -1,0 +1,12 @@
+data-compiled/
+data-source/
+module/build/
+/**/__pycache__/
+old/
+tests/
+web/dist/
+web/node_modules/
+web/package-lock.json
+web-excel/
+.DS_Store
+.vscode/
