@@ -1,7 +1,0 @@
-setup.py
-dist/NumSrvHelper/__init__.py
-dist/NumSrvHelper.egg-info/PKG-INFO
-dist/NumSrvHelper.egg-info/SOURCES.txt
-dist/NumSrvHelper.egg-info/dependency_links.txt
-dist/NumSrvHelper.egg-info/not-zip-safe
-dist/NumSrvHelper.egg-info/top_level.txt
