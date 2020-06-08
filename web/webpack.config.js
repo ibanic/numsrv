@@ -4,7 +4,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 
 //let targetDir = path.resolve(__dirname, '../')
-//let publicPath = '/quotes/'
+let publicPath = '/numsrv/'
 
 
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     //path: targetDir,
-    publicPath: '/',
+    publicPath: publicPath,
   },
 
 
@@ -93,7 +93,9 @@ module.exports = {
 
 
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: {
+      index: publicPath,
+    },
     proxy: {
       '/api': {
         changeOrigin: true,

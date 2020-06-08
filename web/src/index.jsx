@@ -19,7 +19,7 @@ class App extends Component {
 		setForceUpdate(null)
 	}
 	render() {
-	return <BrowserRouter>
+	return <BrowserRouter basename='/numsrv/'>
 		<Switch>
 			<Route exact path='/' component={Home} />
 			<Route path='/dims/:dimKey' component={DimDetails} />
