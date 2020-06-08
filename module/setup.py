@@ -15,6 +15,9 @@ from setuptools.command.build_ext import build_ext
 # python3 setup.py develop
 
 
+# python3 setup.py develop -DCMAKE_PREFIX_PATH=/usr/local/opt/icu4c
+
+
 # python3 setup.py build -DBoost_PYTHON_LIBRARY_DEBUG=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib -DBoost_PYTHON_LIBRARY_RELEASE=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib
 # python3 setup.py install -DBoost_PYTHON_LIBRARY_DEBUG=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib -DBoost_PYTHON_LIBRARY_RELEASE=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib
 # python3 setup.py develop -DBoost_PYTHON_LIBRARY_DEBUG=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib -DBoost_PYTHON_LIBRARY_RELEASE=/usr/local/Cellar/boost-python3/1.70.0_1/lib/libboost_python37-mt.dylib
