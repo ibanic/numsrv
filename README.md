@@ -10,7 +10,7 @@ cd numsrv/module
 python3 setup.py bdist_wheel
 ```
 
-## Module instalation for server and for data importing scripts
+## Module installation for server and for data importing scripts
 ```sh
 cd numsrv/module
 sudo apt-get install python3-venv

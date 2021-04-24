@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-//import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import CubeBrowser from '../../web-common/cubeBrowser'
-//import {Bar, Line} from 'react-chartjs-2'
 import loadJs from './loadJs'
 import { transName, transDimItemNameShort, isIntUnits } from '../../web-common/trans'
 import { usUnitName } from '../../web-common/units'
@@ -155,7 +153,6 @@ export default class CubeDetails extends Component {
 				<button className="btn btn-secondary" onClick={()=>this.setState({chartData:null})}>
 					X
 				</button>
-				{/*<Line data={this.state.chartData} options={chartOpt}/>*/}
 				{chart}
 			</div>}
 			{this.renderCellInfo()}

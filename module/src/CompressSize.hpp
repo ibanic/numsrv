@@ -6,9 +6,6 @@
 //  Copyright © 2020 Ignac Banic. All rights reserved.
 //
 
-//#ifndef SearchCompressSize_hpp
-//#define SearchCompressSize_hpp
-
 #pragma once
 
 
@@ -51,5 +48,3 @@ namespace NumSrv {
 	uint8_t numBytesSize(size_t size);
 
 }
-
-//#endif // SearchCompressSize_hpp

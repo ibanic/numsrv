@@ -1,6 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const path = require('path');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 //let targetDir = path.resolve(__dirname, '../')
@@ -69,21 +68,15 @@ module.exports = {
 
 
   plugins: [
-    //new CleanWebpackPlugin([path.basename(targetDir)], {verbose:true, dry:false, root:path.resolve(targetDir, '../')}),
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     }),
-    //new BundleAnalyzerPlugin(),
   ],
 
 
 
   externals: {
-    //'moment': 'moment',
-    //'chart': 'Chart',
-    //'chart.js': 'Chart.js',
-    //'react-chartjs-2': 'ReactChartjs2',
     'react': 'React',
     'react-dom': 'ReactDOM',
     'react-router': 'ReactRouter',
@@ -104,10 +97,5 @@ module.exports = {
       },
     }
   },
-
-
-
-
-
 
 };

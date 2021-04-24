@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import { Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import DimBrowser from '../../web-common/dimBrowser'
 import { transName, transDimItemNameShort, isIntUnits } from '../../web-common/trans'
