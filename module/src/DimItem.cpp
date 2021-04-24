@@ -9,9 +9,9 @@
 #include <thread>
 #include <future>
 
-#include "../../../Search/FindMany.hpp"
-#include "../../../Search/Comparators.hpp"
-#include "../../../Search/Db.hpp"
+#include <FindMany.hpp>
+#include <Comparators.hpp>
+#include <Db.hpp>
 
 
 namespace NumSrv
@@ -37,7 +37,7 @@ namespace NumSrv
 		DimItem::DimItem(TId id2, const Search::BytesView& dt2)
 			: id(id2)
 		{
-			const Byte* ptr = dt2.data();
+			const Byte* ptr = (const Byte*)dt2.data();
 			key = BinaryReadWrite::readString(ptr);
 			auto nameShort2 = readMapLang(ptr);
 			nameShort = mapLangFromNum(nameShort2);
@@ -66,8 +66,8 @@ namespace NumSrv
 				BinaryReadWrite::sizeUint32() +
 				BinaryReadWrite::sizeUint32() + BinaryReadWrite::sizeUint32() * childs.size()
 			;
-			Search::Bytes tmp(num, '\0');
-			Byte* ptr = &tmp[0];
+			Search::Bytes tmp(num, Byte{'\0'});
+			auto* ptr = &tmp[0];
 			BinaryReadWrite::writeString(ptr, key);
 			writeMapLang(ptr, nameShort2);
 			writeMapLang(ptr, nameLong2);

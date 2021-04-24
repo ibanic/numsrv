@@ -5,7 +5,7 @@ namespace NumSrv {
 
 	uint64_t readSize(const Byte*& data)
 	{
-		uint8_t len = *data & 0xC0;
+		uint8_t len = ((uint8_t)*data) & 0xC0;
 		if( len == 0 ) {
 			uint8_t num = *reinterpret_cast<const uint8_t*>(data);
 			data += 1;
@@ -66,7 +66,7 @@ namespace NumSrv {
 		if(numBytes == 0) {
 			numBytes = numBytesSize(size);
 		}
-		Bytes buff(numBytes, '\0');
+		Bytes buff(numBytes, Byte{'\0'});
 		Byte* buff2 = &buff[0];
 		writeSize(buff2, size, numBytes);
 		return buff;

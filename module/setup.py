@@ -14,6 +14,8 @@ from setuptools.command.build_ext import build_ext
 # python3 setup.py build
 # python3 setup.py develop
 
+# https://www.benjack.io/2018/02/02/python-cpp-revisited.html
+
 
 # python3 setup.py develop -DCMAKE_PREFIX_PATH=/usr/local/opt/icu4c
 

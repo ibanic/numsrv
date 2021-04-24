@@ -39,7 +39,9 @@ add_library(${PROJECT_NAME} MODULE ${Sources} ${HeadersC} ${HeadersC} ${Headers}
 
 
 
-add_subdirectory("../../Search" "search")
+add_subdirectory("./search" "search")
+INCLUDE_DIRECTORIES("./search")
+INCLUDE_DIRECTORIES("./search/tessil-hopscotch-map/include")
 #target_link_libraries(${PROJECT_NAME} Search )
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 

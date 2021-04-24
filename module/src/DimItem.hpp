@@ -16,9 +16,9 @@
 #include <boost/iostreams/device/mapped_file.hpp>
 #include <optional>
 #include <map>
-#include "../../../Search/KeyValueFile.hpp"
-#include "../../../Search/Types.hpp"
-#include "../../../Search/FileStore.hpp"
+#include <KeyValueFile.hpp>
+#include <Types.hpp>
+#include <FileStore.hpp>
 #include "Types.hpp"
 
 namespace fs = std::filesystem;
@@ -31,7 +31,7 @@ namespace NumSrv
 	{
 	public:
 		typedef uint32_t TId;
-		typedef std::array<Search::Byte, sizeof(TId)> TIdSerialized;
+		typedef std::array<std::byte, sizeof(TId)> TIdSerialized;
 		
 		uint32_t id;
 		std::string key;
@@ -49,7 +49,7 @@ namespace NumSrv
 		
 		DimItem() = default;
 		
-		DimItem(TId id, const std::basic_string_view<Search::Byte>& dt2);
+		DimItem(TId id, const std::basic_string_view<std::byte>& dt2);
 		Search::Bytes serialize() const;
 		static TIdSerialized serializeId(TId id);
 		static TId deserializeId(const TIdSerialized& arr);

@@ -9,9 +9,9 @@
 #include <thread>
 #include <future>
 
-#include "../../../Search/FindMany.hpp"
-#include "../../../Search/Comparators.hpp"
-#include "../../../Search/Db.hpp"
+#include <FindMany.hpp>
+#include <Comparators.hpp>
+#include <Db.hpp>
 #include "Common.hpp"
 
 
@@ -200,7 +200,7 @@ namespace NumSrv
 		auto path4 = genDimKeysPath(dataPath, dim.key);
 		Search::KeyValueFile keys2(path4);
 		for( const auto& it : items ) {
-			Search::Bytes id2(BinaryReadWrite::sizeUint32(), '\0');
+			Search::Bytes id2(BinaryReadWrite::sizeUint32(), Byte{'\0'});
 			Byte* ptr = &id2[0];
 			BinaryReadWrite::writeUint32(ptr, it.id);
 			keys2.set(it.key, id2);

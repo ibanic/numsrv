@@ -16,9 +16,9 @@
 #include <boost/iostreams/device/mapped_file.hpp>
 #include <optional>
 #include <map>
-#include "../../../Search/KeyValueFile.hpp"
-#include "../../../Search/Types.hpp"
-#include "../../../Search/FileStore.hpp"
+#include <KeyValueFile.hpp>
+#include <Types.hpp>
+#include <FileStore.hpp>
 #include "Types.hpp"
 #include "DimItem.hpp"
 

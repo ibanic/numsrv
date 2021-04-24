@@ -13,7 +13,7 @@
 
 namespace NumSrv
 {
-	typedef unsigned char Byte;
+	typedef std::byte Byte;
 	typedef std::basic_string<Byte> Bytes;
 	typedef std::basic_string_view<Byte> BytesView;
 }

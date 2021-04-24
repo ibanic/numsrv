@@ -2,6 +2,7 @@ data-compiled/
 data-source/
 module/build/
 /**/__pycache__/
+/**/numsrvenv/
 old/
 tests/
 web/dist/
@@ -10,3 +11,11 @@ web/package-lock.json
 web-excel/
 .DS_Store
 .vscode/
+*.so
+*.dll
+*.a
+*.zip
+*.tar
+*.tar.gz
+*.whl
+*.wheel

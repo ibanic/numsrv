@@ -28,6 +28,8 @@ loadDimsAndCubes()
 
 
 app = Flask(__name__, static_folder="../website/dist")  #, template_folder="../static"
+# enable cors for all domains
+# alternatively:   , resources={r"/api/*": {"origins": "*"}}
 CORS(app)
 
 
